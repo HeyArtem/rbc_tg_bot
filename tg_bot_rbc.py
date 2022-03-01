@@ -8,13 +8,13 @@ from aiogram.utils.markdown import hlink
 Бот должен использовать библиотеку
 aioshedule
 '''
-bot = Bot(token='5129945325:AAEQFdCvUjoqKpDz2P5ifdjuA5w44bO22wc', parse_mode=types.ParseMode.HTML)
+bot = Bot(token='ЗДЕСЬ СВОЙ ТОКЕН', parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
 # тестовая функция
 async def trial_trip():
     name = 'Hello from Semen Semenovich! '
-    await bot.send_message(564764469, name, disable_notification=True)
+    await bot.send_message(ID СВОЕГО БОТА, name, disable_notification=True)
     
 
 # функция должна отправлять новые посты с сайта rbc
@@ -29,7 +29,7 @@ async def sending_messages(path=get_data_new()):
         for k, v, in fresh_news_dict.items():
             # finished_message = f"{k}: {v}"
             finished_message = f"{hlink(k,v)}"
-            await bot.send_message(564764469, finished_message, disable_notification=True)
+            await bot.send_message(ID СВОЕГО БОТА, finished_message, disable_notification=True)
             
     # если новостей нет, переходим в эту ветку
     else:
